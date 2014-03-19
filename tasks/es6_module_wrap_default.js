@@ -42,6 +42,9 @@ module.exports = function (grunt) {
 
       var importPath = path.join(path.relative(destDirname, srcDirname), srcBaseName);
 
+      // Path will use forward slash as delimiter on both Windows and Unix based systems.
+      importPath = path.normalize(importPath).replace(/\\/g, '/');
+
       var src;
 
       switch (options.type) {
