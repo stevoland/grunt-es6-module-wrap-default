@@ -49,13 +49,13 @@ module.exports = function (grunt) {
 
       switch (options.type) {
         case 'cjs':
-          src = "var " + srcBaseName + " = require('./" + importPath + "').default;\n" +
+          src = "var " + srcBaseName + " = require('./" + importPath + "')['default'];\n" +
             "module.exports = " + srcBaseName;
           break;
 
         case 'amd':
           src = "define(['./" + importPath + "'], function (" + srcBaseName + ") {\n" +
-            "  return " + srcBaseName + ".default;\n" +
+            "  return " + srcBaseName + "['default'];\n" +
             "})";
           break;
       }
