@@ -1,7 +1,7 @@
 {
   "name": "grunt-es6-module-wrap-default",
   "description": "Wrap CommonJS and AMD modules created with es6-module-transpiler so that they can be required as ('name') and not ('name').default",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/stevoland/grunt-es6-module-wrap-default",
   "author": {
     "name": "Stephen J. Collings",
